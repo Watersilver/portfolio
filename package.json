@@ -13,6 +13,6 @@
   },
   "scripts": {
     "serve": "parcel index.html --out-dir dev",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --out-dir docs"
   }
 }
