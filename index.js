@@ -1,4 +1,9 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from "react";
+import {render} from "react-dom";
 
-ReactDOM.render(<h1>Hello world!</h1>, document.getElementById("root"))
+import App from "./public/js/components/App.js";
+
+render(<App />, document.getElementById("root"));
+
+
+document.getElementsByTagName("body")[0].style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");

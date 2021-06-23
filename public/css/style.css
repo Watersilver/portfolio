@@ -1,0 +1,125 @@
+body {
+  --sticky-height: 3em;
+  --color1: #20232A;
+  --color2: #61DAFB;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 1 / Golden ratio ^ 2 ~ 0.382 */
+#main-navigation {
+  position: fixed;
+  width: calc(var(--sticky-height) * 0.5 + 38.2vw);
+  height: var(--sticky-height);
+  top: 0;
+  right: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 38.2vw;
+}
+
+#main-navigation>:first-child {
+  height: 50%;
+  overflow: hidden;
+}
+#main-navigation>:first-child>:first-child {
+  background: radial-gradient(circle at center left,transparent calc(0.5 * var(--sticky-height)),var(--color1) 0) bottom left;
+  height: 200%;
+}
+
+#main-navigation>:last-child {
+  background-color: var(--color1);
+  border-bottom-left-radius: calc(0.25 * var(--sticky-height));
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+
+  box-sizing: border-box;
+  padding: 0 1em 4px;
+}
+
+.navbutton {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+  box-sizing: border-box;
+  border: 3px inset var(--color2);
+  border-top: 0;
+  user-select: none;
+
+  transition: 0.382s color;
+}
+
+.navbutton:hover {
+  border: 4px inset var(--color2);
+  border-top: 0;
+  color: var(--color2);
+}
+
+#welcome {
+  height: 100vh;
+  /* background: black radial-gradient(ellipse at top, #e66465, transparent) fixed; */
+  background-color: var(--color1);
+}
+
+main {
+  background-color: #F7F7F7;
+  color: #6D6D6D;
+}
+
+#filter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  overflow: auto;
+  display: grid;
+  grid-auto-flow: column;
+
+  width: calc(61.8vw - var(--scrollbar-width) + 1px);
+  height: calc(var(--sticky-height) + 1px);
+  background-color: var(--color1);
+  border-top-right-radius: calc(0.5 * var(--sticky-height));
+  border-bottom-right-radius: calc(0.25 * var(--sticky-height));
+}
+
+.filter-button {
+  cursor: pointer;
+  padding: 4px;
+  color: #fff;
+  text-align: center;
+
+  user-select: none;
+
+  transition: 0.382s border, 0.382s color;
+  border-bottom: 0px solid var(--color2);
+}
+.filter-button.pressed {
+  color: var(--color2);
+
+  border-bottom: 5px solid var(--color2);
+}
+.filter-button:hover {
+  color: var(--color2);
+}
+
+.filter-button>* {
+  position: relative;
+  transition: 0.382s top;
+  top: 0.3em;
+}
+.filter-button.pressed>* {
+  top: .8em;
+}
+
+footer {
+  height: 50vh;
+  background-color: var(--color1);
+}
