@@ -2,6 +2,9 @@ body {
   --sticky-height: 3em;
   --color1: #20232A;
   --color2: #61DAFB;
+  --color3: #F7F7F7;
+  --color4: #6D6D6D;
+  --color5: #ECECEC;
 
   font-family: 'Open Sans', sans-serif;
 }
@@ -71,8 +74,52 @@ body {
 }
 
 main {
-  background-color: #F7F7F7;
-  color: #6D6D6D;
+  background-color: var(--color3);
+  color: var(--color4);
+  display: grid;
+}
+
+main>h2 {
+  text-align: center;
+}
+
+.items {
+  --gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+  padding: var(--gap);
+}
+
+.item {
+  width: 331px;
+  margin: var(--gap);
+  background-color: var(--color5);
+}
+
+.item>.snapshot {
+  /* height: 207px; */
+  height: 203px;
+  border: 3px solid black;
+
+  display: block;
+}
+
+.item>.snapshot>img {
+  max-width: 100%;
+}
+
+.item>.title {
+  text-align: center;
+}
+
+.item>.description {
+  padding: 0 5px;
+}
+
+.item>.tags {
+  padding: 0 5px;
 }
 
 #filter {
