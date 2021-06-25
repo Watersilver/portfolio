@@ -1,6 +1,11 @@
 import React, {Component} from "react";
 import Context from '../Context.js';
 
+import {
+  isDesktop,
+  isMobile
+} from "react-device-detect";
+
 import tags from "../tags.js";
 
 import Item from "./Item.js";
@@ -46,14 +51,15 @@ import sim1img from "../../images/similar1.png";
 import sim2img from "../../images/similar2.png";
 import finaimg from "../../images/finance.png";
 import encoimg from "../../images/entcomp.png";
+import prinimg from "../../images/princess.png";
 import kinpimg from "../../images/keyboardinput.png";
 
 const itemsData = [
   new ItemData("Project Euler", "Solutions to Project Euler problems", clinimg, "https://github.com/Watersilver/ProjectEuler",
   tags.python),
-  new ItemData("File Comparison", "Web app where you can upload two files to be compared using a simple algorithm. Python backend.", sim1img, "https://github.com/Watersilver/cs50/tree/master/workspace/pset6/similarities/less",
+  new ItemData("File Comparison", "Web app where you can upload two files to be compared using a simple algorithm.", sim1img, "https://github.com/Watersilver/cs50/tree/master/workspace/pset6/similarities/less",
   tags.python, tags.backend),
-  new ItemData("String Comparison", "Web app that measures edit distance between two strings, using dynamic programming. Python backend.", sim2img, "https://github.com/Watersilver/cs50/tree/master/workspace/pset6/similarities/more",
+  new ItemData("String Comparison", "Web app that measures edit distance between two strings, using dynamic programming.", sim2img, "https://github.com/Watersilver/cs50/tree/master/workspace/pset6/similarities/more",
   tags.python, tags.backend),
   new ItemData("Stock Trading Simulator", "Web app. Queries Yahoo or Alpha Vantage for quotes.", finaimg, "https://github.com/Watersilver/cs50/tree/master/workspace/pset7/finance",
   tags.python, tags.backend),
@@ -113,12 +119,12 @@ const itemsData = [
   tags.javascript),
   new ItemData("KeyboardInput", "Keyboard input storage. Javascript module.", kinpimg, "https://github.com/Watersilver/KeyboardInput",
   tags.javascript),
-  new ItemData("cppGame", "Small game made with C++. Works with a simple Entity-Component-System implementation. Also implements collision detection and resolution. To run clone/download repo, navigate to cppTestProject/Release and double click the .exe file.", cppgimg, "https://github.com/Watersilver/cppTestProject",
+  new ItemData("cppGame", "Small game made with C++. Works with a simple Entity-Component-System implementation. Also implements collision detection and resolution. To play, clone/download repo, navigate to cppTestProject/Release and double click the .exe file.", cppgimg, "https://github.com/Watersilver/cppTestProject",
   tags.cpp, tags.gamedev),
-  new ItemData("lovegame", "Massive unfinished project as of yet. Top down action rpg in the spirit of the zelda gameboy games. Uses placeholder resources for now.", loveimg, "https://github.com/Watersilver/lovegame",
+  new ItemData("lovegame", "Massive unfinished project as of yet. Top down action rpg in the spirit of the zelda gameboy games. Uses placeholder resources for now.", loveimg, "https://drive.google.com/file/d/1f5dd3DlIjWycdfVOztlvTa5hgauW7n1_/view?usp=sharing",
   tags.lua, tags.gamedev),
-  // new ItemData("Gamemaker game", "Pretty large very hard and unforgiving platformer.", null, "https://watersilver.itch.io/the-princess-and-the-plumber",
-  // tags.gamedev),
+  new ItemData("The Princess and the Plumber", "Pretty large very hard and unforgiving platformer.", prinimg, "https://watersilver.itch.io/the-princess-and-the-plumber",
+  tags.gamedev),
 ];
 
 itemsData.sort((a, b) => a.title.localeCompare(b.title));
@@ -162,40 +168,102 @@ class Provider extends Component {
 }
 
 
-function App(props) {
-  return (
-    <Provider>
-      <Context.Consumer>
-        {ctx => {
-        const items = itemsData.filter(itemData => {
-          for (let tag of tags.getAllTags(itemData.myTags)) {
-            if (ctx.show.has(tag)) return true;
-          }
-        }).map(itemData => <Item key={itemData.title} data={itemData} />);
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {"0": "notouch"};
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  handleScroll() {
+    const navel = document.querySelector("#main-navigation>:last-child");
+
+    if(window.scrollY > (window.innerHeight - navel.offsetTop - 1)){
+      if (this.state[0] !== "touch") this.setState(["touch"]);
+    } else {
+      if (this.state[0] !== "notouch") this.setState(["notouch"]);
+    }
+  }
+
+  componentDidMount() {
+    if (isDesktop)
+      window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    if (isDesktop)
+      window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  render() {
+    console.log("damn");
+    return (
+      <Provider>
+        <Context.Consumer>
+          {ctx => {
+          const items = itemsData.filter(itemData => {
+            for (let tag of tags.getAllTags(itemData.myTags)) {
+              if (ctx.show.has(tag)) return true;
+            }
+          }).map(itemData => <Item key={itemData.title} data={itemData} />);
 
 
-        return <section>
-          <nav id="main-navigation">
-            <div><div></div></div>
-            <div>
-              <Navbutton link="#welcome" className="welcome">Welcome</Navbutton>
-              <Navbutton link="#showcase" className="showcase">Projects</Navbutton>
-              <Navbutton link="#goodbye" className="goodbye">Contact</Navbutton>
-            </div>
-          </nav>
-          <header id="welcome"></header>
-          <main id="showcase">
-            <Filter />
-            <h2>Here is a sample of my work</h2>
+          return <section className={isMobile ? "mobile" : ""}>
+            {isDesktop ? <nav id="main-navigation" className={this.state[0] === "touch" ? "attached" : ""}>
+              <div><div></div></div>
+              <div>
+                <Navbutton link="#welcome" className="welcome">Welcome</Navbutton>
+                <Navbutton link="#showcase" className="showcase">Projects</Navbutton>
+                <Navbutton link="#goodbye" className="goodbye">Contact</Navbutton>
+              </div>
+            </nav> : null}
+            <header id="welcome">
+              {isDesktop ? <div id="background-details">
+                <div className="det-white-ball1"></div>
+                <div className="det-white-rect1"></div>
+                <div className="det-white-rect2"></div>
+                <div className="det-black-ball1"></div>
+              </div> : null}
+              <section id="few-words">
+                <span className="sentence1">Hello,</span>
+                <span className="sentence2">I am Ermis,</span>
+                <span className="sentence3">A programmer with a diverse skillset.</span>
+                {isDesktop ? <span className="sentence4">
+                  <span>Scroll down to see a sample of my work</span>
+                </span> : null}
+              </section>
+            </header>
+            <main id="showcase">
+              <Filter />
+              <h2 className="filter-instruction">Use the filter to list the work you are interested in</h2>
 
-            <section className="items">{items}</section>
-          </main>
-          <footer id="goodbye"></footer>
-        </section>
-        }}
-      </Context.Consumer>
-    </Provider>
-  );
+              <section className="items">{items}</section>
+            </main>
+            <footer id="goodbye">
+              <section className="more">
+                <figure>
+                  <figcaption>Find more of my work here</figcaption>
+                  <ul>
+                    <li><a href="https://github.com/Watersilver">github</a></li>
+                    <li><a href="https://codepen.io/watersilver">codepen</a></li>
+                    <li><a href="https://glitch.com/@Watersilver">glitch</a></li>
+                  </ul>
+                </figure>
+              </section>
+              <section className="contact">
+                <section>
+                  <span>Contact me at </span>
+                  <a href="mailto:ermiszervos@gmail.com">ermiszervos@gmail.com</a>
+                </section>
+              </section>
+            </footer>
+          </section>
+          }}
+        </Context.Consumer>
+      </Provider>
+    );
+  }
 };
 
 export default App;
