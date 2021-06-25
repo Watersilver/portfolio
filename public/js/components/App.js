@@ -236,7 +236,7 @@ class App extends Component {
             </header>
             <main id="showcase">
               <Filter />
-              <h2 className="filter-instruction">Use the filter to list the work you are interested in</h2>
+              <h2 className="filter-instruction">Use the filter to only include tags you are interested in</h2>
 
               <section className="items">{items}</section>
             </main>

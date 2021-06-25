@@ -326,7 +326,7 @@ main>h2 {
 .filter-button {
   cursor: pointer;
   padding: 4px;
-  color: #fff;
+  color: #fff5;
   text-align: center;
 
   user-select: none;
@@ -420,6 +420,10 @@ main>h2 {
   align-items: center;
 
   grid-area: contact;
+}
+
+.mobile #goodbye .contact {
+  padding-bottom: 10px;
 }
 
 #goodbye .contact a {
