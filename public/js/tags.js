@@ -2,18 +2,18 @@ const tags = {
   python: "Python",
   cpp: "C++",
   c: "C",
+  lua: "Lua",
   // csharp: "C#",
+  frontend: "Front End",
   html: "Html",
   css: "Css",
   javascript: "Javascript",
-  node: "Node.js",
-  lua: "Lua",
   react: "React",
   redux: "Redux",
-  frontend: "Front End",
-  backend: "Back End",
-  mongodb: "MongoDB",
   d3: "D3.js",
+  backend: "Back End",
+  node: "Node.js",
+  mongodb: "MongoDB",
   gamedev: "Gamedev"
 };
 
@@ -67,6 +67,8 @@ Object.defineProperty(tags, "getFilterTags", {
       case tags.redux:
       case tags.react:
       case tags.frontend:
+      // case tags.html:
+      // case tags.css:
       case tags.backend:
       // case tags.gamedev:
         return false;
