@@ -140,6 +140,11 @@ body {
   user-select: none;
 }
 
+.filter-instruction {
+  text-align: center;
+  margin-bottom: 0;
+}
+
 #few-words>* {
   position: absolute;
 
@@ -198,10 +203,6 @@ main {
   background-color: var(--color3);
   color: var(--color4);
   display: grid;
-}
-
-main>h2 {
-  text-align: center;
 }
 
 .items {

@@ -159,6 +159,10 @@ class Provider extends Component {
 
             return {show: newShow};
           })
+        },
+
+        exclusiveSelectTag: tag => {
+          this.setState({show: new Set([tag])})
         }
       }}>
         {this.props.children}
@@ -237,6 +241,7 @@ class App extends Component {
             <main id="showcase">
               <Filter />
               <h2 className="filter-instruction">Use the filter to only include tags you are interested in</h2>
+              {isDesktop ? <p className="filter-instruction">Shift+click to select multiple tags</p> : null}
 
               <section className="items">{items}</section>
             </main>
