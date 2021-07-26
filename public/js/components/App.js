@@ -27,9 +27,10 @@ class ItemData {
 import jsmoimg from "../../images/jsmodule.png";
 import clinimg from "../../images/cli.png";
 
-import twopowN from "../../images/2powN.png";
+import twopimg from "../../images/2powN.png";
 import barcimg from "../../images/barchart.png";
 import calcimg from "../../images/calculator.png";
+import contimg from "../../images/contacts.png";
 import chorimg from "../../images/choropleth.png";
 import drumimg from "../../images/drum.png";
 import heatimg from "../../images/heat.png";
@@ -57,8 +58,10 @@ import prinimg from "../../images/princess.png";
 import kinpimg from "../../images/keyboardinput.png";
 
 const itemsData = [
-  new ItemData("2 ^ n, n∈ℕ", "A variant of the 2048 game that allows you to choose grid size and winning power of two.", twopowN, "https://watersilver.github.io/2powN/",
+  new ItemData("2 ^ n, n∈ℕ", "A variant of the 2048 game that allows you to choose grid size and winning power of two.", twopimg, "https://watersilver.github.io/2powN/",
   tags.javascript, tags.css, tags.html, tags.gamedev),
+  new ItemData("Contacts", "A web app for management of contacts.", contimg, "https://contgeks.glitch.me/",
+  tags.node, tags.react, tags.css, tags.html, tags.mongodb),
   new ItemData("Project Euler", "Solutions to Project Euler problems.", clinimg, "https://github.com/Watersilver/ProjectEuler",
   tags.python),
   new ItemData("File Comparison", "Web app where you can upload two files to be compared using a simple algorithm.", sim1img, "https://github.com/Watersilver/cs50/tree/master/workspace/pset6/similarities/less",
