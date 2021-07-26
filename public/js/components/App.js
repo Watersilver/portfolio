@@ -23,9 +23,11 @@ class ItemData {
   }
 };
 
+// 331 x 207
 import jsmoimg from "../../images/jsmodule.png";
 import clinimg from "../../images/cli.png";
 
+import twopowN from "../../images/2powN.png";
 import barcimg from "../../images/barchart.png";
 import calcimg from "../../images/calculator.png";
 import chorimg from "../../images/choropleth.png";
@@ -55,7 +57,9 @@ import prinimg from "../../images/princess.png";
 import kinpimg from "../../images/keyboardinput.png";
 
 const itemsData = [
-  new ItemData("Project Euler", "Solutions to Project Euler problems", clinimg, "https://github.com/Watersilver/ProjectEuler",
+  new ItemData("2 ^ n, n∈ℕ", "A variant of the 2048 game that allows you to choose grid size and winning power of two.", twopowN, "https://watersilver.github.io/2powN/",
+  tags.javascript, tags.css, tags.html, tags.gamedev),
+  new ItemData("Project Euler", "Solutions to Project Euler problems.", clinimg, "https://github.com/Watersilver/ProjectEuler",
   tags.python),
   new ItemData("File Comparison", "Web app where you can upload two files to be compared using a simple algorithm.", sim1img, "https://github.com/Watersilver/cs50/tree/master/workspace/pset6/similarities/less",
   tags.python, tags.backend),
@@ -93,8 +97,8 @@ const itemsData = [
   tags.react, tags.css, tags.html),
   new ItemData("Drum Machine", "Click the buttons or press the corresponding keys to play sounds!", drumimg, "https://codepen.io/watersilver/full/ROramX",
   tags.react, tags.css, tags.html),
-  new ItemData("Calculator", "A simple web calculator. Not the most accurate calculator...", calcimg, "https://codepen.io/watersilver/full/ROaWyP",
-  tags.react, tags.redux, tags.css, tags.html),
+  // new ItemData("Calculator", "A simple web calculator. Not the most accurate calculator...", calcimg, "https://codepen.io/watersilver/full/ROaWyP",
+  // tags.react, tags.redux, tags.css, tags.html),
   new ItemData("Pomodoro Timer", "Cycle between work time and breaks with the help of this.", pomoimg, "https://codepen.io/watersilver/full/axmLxp",
   tags.javascript, tags.css, tags.html),
   new ItemData("Bar Chart", "A bar chart of the United States GDP.", barcimg, "https://codepen.io/watersilver/full/oOBGmL",
