@@ -14,7 +14,8 @@ const tags = {
   backend: "Back End",
   node: "Node.js",
   mongodb: "MongoDB",
-  gamedev: "Gamedev"
+  gamedev: "Gamedev",
+  webassembly: "WebAssembly"
 };
 
 const getImpliedTags = (explicitTag) => {

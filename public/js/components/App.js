@@ -28,6 +28,7 @@ import jsmoimg from "../../images/jsmodule.png";
 import clinimg from "../../images/cli.png";
 
 import twopimg from "../../images/2powN.png";
+import goflimg from "../../images/gameoflife.png";
 import barcimg from "../../images/barchart.png";
 import calcimg from "../../images/calculator.png";
 import contimg from "../../images/contacts.png";
@@ -58,9 +59,11 @@ import prinimg from "../../images/princess.png";
 import kinpimg from "../../images/keyboardinput.png";
 
 const itemsData = [
+  new ItemData("Conway's Game of Life", "Implementation of Conway's Game of Life, the famous cellular automaton, written in C++ that compiles as both a native and web app.", goflimg, "https://watersilver.github.io/Game-of-Life/",
+  tags.cpp, tags.webassembly),
   new ItemData("2 ^ n, n∈ℕ", "A variant of the 2048 game that allows you to choose grid size and winning power of two.", twopimg, "https://watersilver.github.io/2powN/",
   tags.javascript, tags.css, tags.html, tags.gamedev),
-  new ItemData("Contacts", "A web app for management of contacts.", contimg, "https://contgeks.glitch.me/",
+  new ItemData("Contacts", "A web app that stores contact information. Contacts can be inserted, edited and deleted. Contacts are required to have a name and a valid email. They can also have an address and multiple valid phone numbers. Validation happens both at the front and the back end.", contimg, "https://contgeks.glitch.me/",
   tags.node, tags.react, tags.css, tags.html, tags.mongodb),
   new ItemData("Project Euler", "Solutions to Project Euler problems.", clinimg, "https://github.com/Watersilver/ProjectEuler",
   tags.python),
@@ -126,7 +129,7 @@ const itemsData = [
   tags.javascript),
   new ItemData("KeyboardInput", "Keyboard input storage. Javascript module.", kinpimg, "https://github.com/Watersilver/KeyboardInput",
   tags.javascript),
-  new ItemData("cppGame", "Small game made with C++. Works with a simple Entity-Component-System implementation. Also implements collision detection and resolution. To play, clone/download repo, navigate to cppTestProject/Release and double click the .exe file.", cppgimg, "https://github.com/Watersilver/cppTestProject",
+  new ItemData("cppGame", "Small game made with C++. Works with a simple Entity-Component-System implementation. Also implements collision detection and resolution. To play in windows download and unpack Release.zip and run the .exe file.", cppgimg, "https://github.com/Watersilver/cppTestProject",
   tags.cpp, tags.gamedev),
   new ItemData("lovegame", "Massive unfinished project as of yet. Top down action rpg in the spirit of the zelda gameboy games. Uses placeholder resources for now.", loveimg, "https://drive.google.com/file/d/1f5dd3DlIjWycdfVOztlvTa5hgauW7n1_/view?usp=sharing",
   tags.lua, tags.gamedev),
