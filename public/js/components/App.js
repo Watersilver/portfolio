@@ -30,7 +30,7 @@ import clinimg from "../../images/cli.png";
 import twopimg from "../../images/2powN.png";
 import goflimg from "../../images/gameoflife.png";
 import barcimg from "../../images/barchart.png";
-import calcimg from "../../images/calculator.png";
+import smbrimg from "../../images/smbrowserbanner.png";
 import contimg from "../../images/contacts.png";
 import chorimg from "../../images/choropleth.png";
 import drumimg from "../../images/drum.png";
@@ -135,6 +135,8 @@ const itemsData = [
   tags.lua, tags.gamedev),
   new ItemData("The Princess and the Plumber", "Pretty large very hard and unforgiving platformer.", prinimg, "https://watersilver.itch.io/the-princess-and-the-plumber",
   tags.gamedev),
+  new ItemData("Super Mario Bro(w)s(er)", "Remake of smb1 without loading screens!", smbrimg, "https://watersilver.github.io/smbrowser/",
+  tags.gamedev, tags.typescript, tags.webpack, tags.pixijs, tags.frontend),
 ];
 
 itemsData.sort((a, b) => a.title.localeCompare(b.title));

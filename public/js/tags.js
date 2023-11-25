@@ -15,7 +15,10 @@ const tags = {
   node: "Node.js",
   mongodb: "MongoDB",
   gamedev: "Gamedev",
-  webassembly: "WebAssembly"
+  webassembly: "WebAssembly",
+  typescript: "Typescript",
+  pixijs: "Pixi.js",
+  webpack: "Webpack"
 };
 
 const getImpliedTags = (explicitTag) => {
