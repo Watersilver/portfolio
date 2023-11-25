@@ -26,6 +26,7 @@ const getImpliedTags = (explicitTag) => {
   for (let tag of impliedTags) {
     switch (tag) {
       case (tags.redux):
+      case (tags.typescript):
         impliedTags.add(tags.javascript);
         break;
       case (tags.react):
@@ -71,8 +72,9 @@ Object.defineProperty(tags, "getFilterTags", {
       case tags.redux:
       case tags.react:
       case tags.frontend:
-      // case tags.html:
-      // case tags.css:
+      case tags.webpack:
+      case tags.html:
+      case tags.css:
       case tags.backend:
       // case tags.gamedev:
         return false;
