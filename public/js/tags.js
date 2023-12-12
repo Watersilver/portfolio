@@ -9,6 +9,8 @@ const tags = {
   css: "Css",
   javascript: "Javascript",
   react: "React",
+  nextjs: "Next.js",
+  svelte: "Svelte",
   redux: "Redux",
   d3: "D3.js",
   backend: "Back End",
@@ -18,7 +20,8 @@ const tags = {
   webassembly: "WebAssembly",
   typescript: "Typescript",
   pixijs: "Pixi.js",
-  webpack: "Webpack"
+  webpack: "Webpack",
+  vite: "Vite"
 };
 
 const getImpliedTags = (explicitTag) => {
@@ -29,7 +32,11 @@ const getImpliedTags = (explicitTag) => {
       case (tags.typescript):
         impliedTags.add(tags.javascript);
         break;
+      case (tags.nextjs):
+        impliedTags.add(tags.react);
+        break;
       case (tags.react):
+      case (tags.svelte):
       case (tags.d3):
         impliedTags.add(tags.javascript);
       case (tags.html):
@@ -70,9 +77,12 @@ Object.defineProperty(tags, "getFilterTags", {
     switch (tag) {
       case tags.d3:
       case tags.redux:
+      case tags.nextjs:
       case tags.react:
+      case tags.svelte:
       case tags.frontend:
       case tags.webpack:
+      case tags.vite:
       case tags.html:
       case tags.css:
       case tags.backend:

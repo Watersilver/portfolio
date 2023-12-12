@@ -54,7 +54,8 @@ import loveimg from "../../images/lovegame.png";
 import sim1img from "../../images/similar1.png";
 import sim2img from "../../images/similar2.png";
 import finaimg from "../../images/finance.png";
-import encoimg from "../../images/entcomp.png";
+import sievimg from "../../images/sieve.png";
+import pagoimg from "../../images/pagonis.png";
 import prinimg from "../../images/princess.png";
 import kinpimg from "../../images/keyboardinput.png";
 
@@ -129,6 +130,10 @@ const itemsData = [
   tags.javascript),
   new ItemData("KeyboardInput", "Keyboard input storage. Javascript module.", kinpimg, "https://github.com/Watersilver/KeyboardInput",
   tags.javascript),
+  new ItemData("Sieve of Eratosthenes", "Implementation of sieve of eratosthenes to compare speed of front end frameworks.", sievimg, "https://watersilver.github.io/eratosieve",
+  tags.react, tags.svelte, tags.typescript, tags.vite),
+  new ItemData("Personal Website", "Personal website for a cellist friend.", pagoimg, "https://apostolospagonis.github.io/cellist",
+  tags.nextjs, tags.typescript),
   new ItemData("cppGame", "Small game made with C++. Works with a simple Entity-Component-System implementation. Also implements collision detection and resolution. To play in windows download and unpack Release.zip and run the .exe file.", cppgimg, "https://github.com/Watersilver/cppTestProject",
   tags.cpp, tags.gamedev),
   new ItemData("lovegame", "Massive unfinished project as of yet. Top down action rpg in the spirit of the zelda gameboy games. Uses placeholder resources for now.", loveimg, "https://drive.google.com/file/d/1f5dd3DlIjWycdfVOztlvTa5hgauW7n1_/view?usp=sharing",
