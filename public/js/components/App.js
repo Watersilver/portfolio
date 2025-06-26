@@ -48,7 +48,7 @@ import charimg from "../../images/charsheet.png";
 import meriimg from "../../images/meritocracy.png";
 import css3img from "../../images/css3dworld.png";
 import chatimg from "../../images/chat.png";
-import stocimg from "../../images/stockchecker.png";
+// import stocimg from "../../images/stockchecker.png";
 import cppgimg from "../../images/cppgame.png";
 import loveimg from "../../images/lovegame.png";
 import sim1img from "../../images/similar1.png";
@@ -58,6 +58,7 @@ import sievimg from "../../images/sieve.png";
 import pagoimg from "../../images/pagonis.png";
 import prinimg from "../../images/princess.png";
 import kinpimg from "../../images/keyboardinput.png";
+import maidimg from "../../images/maiday.png";
 
 const itemsData = [
   new ItemData("Conway's Game of Life", "Implementation of Conway's Game of Life, the famous cellular automaton, written in C++ that compiles as both a native and web app.", goflimg, "https://watersilver.github.io/Game-of-Life/",
@@ -90,8 +91,8 @@ const itemsData = [
   tags.node, tags.javascript, tags.css, tags.html),
   new ItemData("Simple Chatroom", "Web app that uses Socket.io and github authentication to implement a simple chatroom.", chatimg, "https://fine-calculator.glitch.me/",
   tags.node, tags.javascript, tags.css, tags.html),
-  new ItemData("Stock Checker", "Check stocks and compare times they've been liked.", stocimg, "https://fuschia-scarf.glitch.me/",
-  tags.javascript, tags.node, tags.mongodb),
+  // new ItemData("Stock Checker", "Check stocks and compare times they've been liked.", stocimg, "https://fuschia-scarf.glitch.me/",
+  // tags.javascript, tags.node, tags.mongodb),
   new ItemData("Spinning Cube (Simple)", "Spin the cube by inputing three angles or pressing 'Random'.", cub1img, "https://codepen.io/watersilver/full/MxOmrP",
   tags.javascript, tags.css, tags.html),
   new ItemData("Tic Tac Toe Card", "Play tic tac toe on a card against a human, a bad AI, a mediocre AI or a perfect AI. Works best on Chrome.", tictimg, "https://codepen.io/watersilver/full/qvMYag",
@@ -122,8 +123,8 @@ const itemsData = [
   tags.d3, tags.css, tags.html),
   new ItemData("JsonState", "Json that runs callbacks when it mutates. Javascript module.", jsmoimg, "https://github.com/Watersilver/JsonState",
   tags.javascript),
-  new ItemData("Psema", "Simple Entity-Component-System (id/state/logic) implementation. Javascript module.", jsmoimg, "https://github.com/Watersilver/Psema",
-  tags.javascript),
+  // new ItemData("Psema", "Simple Entity-Component-System (id/state/logic) implementation. Javascript module.", jsmoimg, "https://github.com/Watersilver/Psema",
+  // tags.javascript),
   new ItemData("TreeNode", "Tree data structure implementation. Javascript module.", jsmoimg, "https://github.com/Watersilver/TreeNode/blob/main/TreeNode.js",
   tags.javascript),
   new ItemData("Framework", "Simple entity-component (id/state & logic) implementation. Javascript module.", jsmoimg, "https://github.com/Watersilver/framework",
@@ -142,6 +143,8 @@ const itemsData = [
   tags.gamedev),
   new ItemData("Super Mario Bro(w)s(er)", "Remake of smb1 without loading screens!", smbrimg, "https://watersilver.github.io/smbrowser/",
   tags.gamedev, tags.typescript, tags.webpack, tags.pixijs, tags.frontend),
+  new ItemData("M.A.I.day", "Megaman x style run and gun with nes like graphics!", maidimg, "https://watersilver.itch.io/maiday/",
+  tags.gamedev, tags.godot),
 ];
 
 itemsData.sort((a, b) => a.title.localeCompare(b.title));
@@ -269,7 +272,7 @@ class App extends Component {
                   <ul>
                     <li><a href="https://github.com/Watersilver">github</a></li>
                     <li><a href="https://codepen.io/watersilver">codepen</a></li>
-                    <li><a href="https://glitch.com/@Watersilver">glitch</a></li>
+                    <li><a href="https://watersilver.itch.io/">itch.io</a></li>
                   </ul>
                 </figure>
               </section>

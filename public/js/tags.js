@@ -21,6 +21,7 @@ const tags = {
   typescript: "Typescript",
   pixijs: "Pixi.js",
   webpack: "Webpack",
+  godot: "Godot",
   vite: "Vite"
 };
 
