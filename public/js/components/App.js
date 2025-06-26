@@ -278,7 +278,7 @@ class App extends Component {
               <section className="contact">
                 <section>
                   <span>Contact me at </span>
-                  <a href="mailto:ermiszervos@gmail.com">ermiszervos@gmail.com</a>
+                  <a href="mailto:cydisalt@gmail.com">cydisalt@gmail.com</a>
                 </section>
               </section>
             </footer>
