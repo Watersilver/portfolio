@@ -137,7 +137,7 @@ const itemsData = [
   tags.nextjs, tags.typescript),
   new ItemData("cppGame", "Small game made with C++. Works with a simple Entity-Component-System implementation. Also implements collision detection and resolution. To play in windows download and unpack Release.zip and run the .exe file.", cppgimg, "https://github.com/Watersilver/cppTestProject",
   tags.cpp, tags.gamedev),
-  new ItemData("lovegame", "Massive unfinished project as of yet. Top down action rpg in the spirit of the zelda gameboy games. Uses placeholder resources for now.", loveimg, "https://drive.google.com/file/d/1f5dd3DlIjWycdfVOztlvTa5hgauW7n1_/view?usp=sharing",
+  new ItemData("lovegame", "Demo of the game I'm developing. It's a top down adventure game resembling the game boy Zelda oracle games and Link's awakening. password:zeldalove2dgame", loveimg, "https://watersilver.itch.io/zelda-like-project",
   tags.lua, tags.gamedev),
   new ItemData("The Princess and the Plumber", "Pretty large very hard and unforgiving platformer.", prinimg, "https://watersilver.itch.io/the-princess-and-the-plumber",
   tags.gamedev),
