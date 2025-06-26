@@ -7,6 +7,7 @@ const root = createRoot(document.getElementById("root"))
 root.render(<App />)
 
 
+// https://stackoverflow.com/questions/13382516/getting-scroll-bar-width-using-javascript
 function getScrollbarWidth() {
 
   // Creating invisible container
