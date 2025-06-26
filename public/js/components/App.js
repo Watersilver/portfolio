@@ -221,7 +221,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("damn");
     return (
       <Provider>
         <Context.Consumer>

@@ -88,6 +88,7 @@ Object.defineProperty(tags, "getFilterTags", {
       case tags.css:
       case tags.backend:
       case tags.godot:
+      case tags.pixijs:
         return false;
       default:
         return true;
