@@ -45,7 +45,7 @@ import tictimg from "url:../../images/tictactoe.png";
 import cub1img from "url:../../images/rotcube1.png";
 import cub2img from "url:../../images/rotcube2.png";
 import charimg from "url:../../images/charsheet.png";
-import meriimg from "url:../../images/meritocracy.png";
+// import meriimg from "url:../../images/meritocracy.png";
 import css3img from "url:../../images/css3dworld.png";
 import chatimg from "url:../../images/chat.png";
 // import stocimg from "url:../../images/stockchecker.png";
@@ -87,8 +87,8 @@ const itemsData = [
   tags.node, tags.javascript, tags.css, tags.html),
   new ItemData("Css 3d World", "Use w, a, s, d to strafe and arrow keys and q, e to turn to navigate the 3d world made with pure html, css and js. (Works best in Chrome)", css3img, "https://css3dworldtest.glitch.me/",
   tags.node, tags.javascript, tags.css, tags.html),
-  new ItemData("Meritocracy", `A very simple "Experiment" that compares skill with luck.`, meriimg, "https://meritocracyv0.glitch.me/",
-  tags.node, tags.javascript, tags.css, tags.html),
+  // new ItemData("Meritocracy", `A very simple "Experiment" that compares skill with luck.`, meriimg, "https://meritocracyv0.glitch.me/",
+  // tags.node, tags.javascript, tags.css, tags.html),
   new ItemData("Simple Chatroom", "Web app that uses Socket.io and github authentication to implement a simple chatroom.", chatimg, "https://fine-calculator.glitch.me/",
   tags.node, tags.javascript, tags.css, tags.html),
   // new ItemData("Stock Checker", "Check stocks and compare times they've been liked.", stocimg, "https://fuschia-scarf.glitch.me/",
