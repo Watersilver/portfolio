@@ -85,7 +85,7 @@ const itemsData = [
   tags.c),
   new ItemData("Spincube", "Spin the cube by clicking and dragging! 3d effects using pure css, and Quaternion.js to calculate rotations.", cub2img, "https://watersilver.github.io/spincube/",
   tags.node, tags.javascript, tags.css, tags.html),
-  new ItemData("Css 3d World", "Use w, a, s, d to strafe and arrow keys and q, e to turn to navigate the 3d world made with pure html, css and js. (Works best in Chrome)", css3img, "https://css3dworldtest.glitch.me/",
+  new ItemData("Css 3d World", "Use w, a, s, d to strafe and arrow keys and q, e to turn to navigate the 3d world made with pure html, css and js. (Works best in Chrome)", css3img, "https://watersilver.github.io/css3dworld/",
   tags.node, tags.javascript, tags.css, tags.html),
   // new ItemData("Meritocracy", `A very simple "Experiment" that compares skill with luck.`, meriimg, "https://meritocracyv0.glitch.me/",
   // tags.node, tags.javascript, tags.css, tags.html),
