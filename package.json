@@ -4,16 +4,16 @@
   "repository": "https://github.com/Watersilver/portfolio.git",
   "author": "ez <cydisalt@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html --dist-dir dev",
+    "build": "parcel build index.html --dist-dir docs --public-url ./"
+  },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.15.4"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-device-detect": "^1.17.0",
-    "react-dom": "^17.0.2"
-  },
-  "scripts": {
-    "dev": "parcel index.html --out-dir dev",
-    "build": "parcel build index.html --out-dir docs --public-url ./"
+    "react": "^19.1.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^19.1.0"
   }
 }

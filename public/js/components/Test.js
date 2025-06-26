@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import image from '../../images/note.png';
+import image from 'url:../../images/note.png';
 
 class App extends Component {
   render() {

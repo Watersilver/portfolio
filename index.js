@@ -1,9 +1,10 @@
 import React from "react";
-import {render} from "react-dom";
+import {createRoot} from "react-dom/client";
 
 import App from "./public/js/components/App.js";
 
-render(<App />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"))
+root.render(<App />)
 
 function detectScrollbar() {
   document.getElementsByTagName("body")[0].style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");

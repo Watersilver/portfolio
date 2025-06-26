@@ -24,41 +24,41 @@ class ItemData {
 };
 
 // 331 x 207
-import jsmoimg from "../../images/jsmodule.png";
-import clinimg from "../../images/cli.png";
+import jsmoimg from "url:../../images/jsmodule.png";
+import clinimg from "url:../../images/cli.png";
 
-import twopimg from "../../images/2powN.png";
-import goflimg from "../../images/gameoflife.png";
-import barcimg from "../../images/barchart.png";
-import smbrimg from "../../images/smbrowserbanner.png";
-import contimg from "../../images/contacts.png";
-import chorimg from "../../images/choropleth.png";
-import drumimg from "../../images/drum.png";
-import heatimg from "../../images/heat.png";
-import chesimg from "../../images/chess.png";
-import pomoimg from "../../images/pomodo.png";
-import bannimg from "../../images/banners.png";
-import scatimg from "../../images/scatterplot.png";
-import treeimg from "../../images/treemap.png";
-import parsimg from "../../images/parser.png";
-import tictimg from "../../images/tictactoe.png";
-import cub1img from "../../images/rotcube1.png";
-import cub2img from "../../images/rotcube2.png";
-import charimg from "../../images/charsheet.png";
-import meriimg from "../../images/meritocracy.png";
-import css3img from "../../images/css3dworld.png";
-import chatimg from "../../images/chat.png";
-// import stocimg from "../../images/stockchecker.png";
-import cppgimg from "../../images/cppgame.png";
-import loveimg from "../../images/lovegame.png";
-import sim1img from "../../images/similar1.png";
-import sim2img from "../../images/similar2.png";
-import finaimg from "../../images/finance.png";
-import sievimg from "../../images/sieve.png";
-import pagoimg from "../../images/pagonis.png";
-import prinimg from "../../images/princess.png";
-import kinpimg from "../../images/keyboardinput.png";
-import maidimg from "../../images/maiday.png";
+import twopimg from "url:../../images/2powN.png";
+import goflimg from "url:../../images/gameoflife.png";
+import barcimg from "url:../../images/barchart.png";
+import smbrimg from "url:../../images/smbrowserbanner.png";
+import contimg from "url:../../images/contacts.png";
+import chorimg from "url:../../images/choropleth.png";
+import drumimg from "url:../../images/drum.png";
+import heatimg from "url:../../images/heat.png";
+import chesimg from "url:../../images/chess.png";
+import pomoimg from "url:../../images/pomodo.png";
+import bannimg from "url:../../images/banners.png";
+import scatimg from "url:../../images/scatterplot.png";
+import treeimg from "url:../../images/treemap.png";
+import parsimg from "url:../../images/parser.png";
+import tictimg from "url:../../images/tictactoe.png";
+import cub1img from "url:../../images/rotcube1.png";
+import cub2img from "url:../../images/rotcube2.png";
+import charimg from "url:../../images/charsheet.png";
+import meriimg from "url:../../images/meritocracy.png";
+import css3img from "url:../../images/css3dworld.png";
+import chatimg from "url:../../images/chat.png";
+// import stocimg from "url:../../images/stockchecker.png";
+import cppgimg from "url:../../images/cppgame.png";
+import loveimg from "url:../../images/lovegame.png";
+import sim1img from "url:../../images/similar1.png";
+import sim2img from "url:../../images/similar2.png";
+import finaimg from "url:../../images/finance.png";
+import sievimg from "url:../../images/sieve.png";
+import pagoimg from "url:../../images/pagonis.png";
+import prinimg from "url:../../images/princess.png";
+import kinpimg from "url:../../images/keyboardinput.png";
+import maidimg from "url:../../images/maiday.png";
 
 const itemsData = [
   new ItemData("Conway's Game of Life", "Implementation of Conway's Game of Life, the famous cellular automaton, written in C++ that compiles as both a native and web app.", goflimg, "https://watersilver.github.io/Game-of-Life/",

@@ -87,7 +87,7 @@ Object.defineProperty(tags, "getFilterTags", {
       case tags.html:
       case tags.css:
       case tags.backend:
-      // case tags.gamedev:
+      case tags.godot:
         return false;
       default:
         return true;
